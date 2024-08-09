@@ -28,7 +28,14 @@ class BoxShadowGenerator {
         this.mozRule = mozRule
     }
 
+    initialize() {
 
+        this.horizontalRef.value = this.horizontal.value
+        this.verticalRef.value = this.vertical.value
+        this.spreadRef.value = this.spread.value
+        this.blurRef.value = this.blur.value
+
+    }
 }
 
 // Elements
@@ -62,7 +69,7 @@ const boxShadow = new BoxShadowGenerator(
     mozRule,
     );
 
-    console.log(boxShadow)
+    boxShadow.initialize();
 // Events
 
 
