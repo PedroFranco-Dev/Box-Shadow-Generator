@@ -53,7 +53,7 @@
             </div>
             <div class="form-control">
                 <div class="range-input">
-                    <label for="color">shadow Color:</label>
+                    <label for="color">Shadow Color:</label>
                     <input type="color" name="color" id="color"  value="#000000">
                 </div>
                 <div class="reference-input">
@@ -72,33 +72,23 @@
             </div>
             <div class="form-control">
                 <div class="range-input">
-                    <label for="spread">Spread Intensity:</label>
-                    <input type="range" name="spread" id="spread" min="-100" max="100" value="3">
-                </div>
-                <div class="reference-input">
-                    <input type="text" id="spread-value" name="spread-value">
-                    <p>px</p>
-                </div>
-            </div>
-            <div class="form-control">
-                <div class="range-input">
                   <label for="opacity">Inner Shadow?</label>
                   <input type="checkbox" id="inset" name="inset">
             </div>
         </div>
-        <div id="preview">
-            <h2>Box Shadow Preview:</h2>
-            <div id="box"></div>
+        <div id="generated-rule">
+            <h2>Copy and Paste into your CSS file</h2>
+            <div id="rules-area">
+                <p id="rule">box-shadow: <span></span>;</p>
+                <p id="webkit-rule">webkit-box-shadow: <span></span>;</p>
+                <p id="moz-rule">moz-box-shadow: <span></span>;</p>
+            </div>
+            <p id="copy-instructions">Click on board to Copy the Styles !</p>
         </div>
     </div>
-    <div id="generated-rule">
-        <h2>Copy and Past into your CSS file</h2>
-        <div id="rules-area">
-            <p id="rule">box-shadow: <span></span>;</p>
-            <p id="webkit-rule">webkit-box-shadow: <span></span>;</p>
-            <p id="moz-rule">moz-box-shadow: <span></span>;</p>
-        </div>
+    <div id="preview">
+        <h2>Box Shadow Preview:</h2>
+        <div id="box"></div>
     </div>
-    
 </body>
 </html>
