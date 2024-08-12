@@ -179,10 +179,34 @@ color.addEventListener("input", (e) => {
     boxShadow.updateValue("color", value)
 });
 
+opacity.addEventListener("input", (e) => {
+    const value = e.target.value;
+
+    boxShadow.updateValue("opacity", value)
+});
+
 inset.addEventListener("input", (e) => {
     const value = e.target.checked;
 
     boxShadow.updateValue("inset", value)
+});
+
+// Copy and Past
+
+const rulesArea = document.querySelector("#rules-area");
+const copyInstructions = document.querySelector("#copy-instructions")
+
+rulesArea.addEventListener("click", () => {
+    const rules = rulesArea.innerText.replace(/^\s*\n/gm, "");
+
+    navigator.clipboard.writeText(rules).then(() => {
+        copyInstructions.innerText = "Rule copied successfully !"
+
+        setTimeout(() => {
+            copyInstructions.innerText = "Click on board to Copy the Styles !";
+        }, 1000);
+    });
+
 });
 
 
